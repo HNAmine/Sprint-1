@@ -20,13 +20,19 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             InputText = (function () {
                 function InputText() {
-                    this.value = "HANANE Amine";
+                    this.value = "";
                 }
+                InputText.prototype.isFull = function () {
+                    if (!this.value || this.value.length == 0) {
+                        return false;
+                    }
+                    return true;
+                };
                 InputText = __decorate([
                     core_1.Component({
                         selector: 'my-input',
                         templateUrl: 'app/inputs/inputText.html',
-                        styleUrls: ['app/inputs/bootstrap.min.css', 'app/inputs/components.css']
+                        styleUrls: ['app/inputs/all.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], InputText);
